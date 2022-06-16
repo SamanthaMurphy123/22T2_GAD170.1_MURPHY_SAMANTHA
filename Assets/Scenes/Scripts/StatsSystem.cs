@@ -80,19 +80,19 @@ public class StatsSystem : MonoBehaviour
         // let's distribute those stats amoungst our strength and agility and intelligence.
         int additionalPoints = 10 / 3;
 
-        float levelStrength = (strength + additionalPoints);
-        float levelAgility = (agility + additionalPoints);
-        float levelIntelligence = (intelligence + additionalPoints);
+        float strengthLevel = (strength + additionalPoints);
+        float agilityLevel = (agility + additionalPoints);
+        float intelligenceLevel = (intelligence + additionalPoints);
 
         // Debug out our new physical stat values
-        Debug.Log("Level up! New Strength: " + levelStrength);
-        Debug.Log("Level up! New Agility: " + levelAgility);
-        Debug.Log("Level up! New Intelligence: " + levelIntelligence);
+        Debug.Log("Level up! New Strength: " + strengthLevel);
+        Debug.Log("Level up! New Agility: " + agilityLevel);
+        Debug.Log("Level up! New Intelligence: " + intelligenceLevel);
 
         // let's recalculate our style, luck and rhythm as our initial stats have changed.
-        int newStyle = (int)(levelStrength * strengthMultiplier);
-        int newLuck = (int)(levelIntelligence * intelligenceMultiplier);
-        int newRhythm = (int)(levelAgility * agilityMultiplier);
+        int newStyle = (int)(strengthLevel * strengthMultiplier);
+        int newLuck = (int)(intelligenceLevel * intelligenceMultiplier);
+        int newRhythm = (int)(agilityLevel * agilityMultiplier);
 
         // Debug out our new dancing stat values
         Debug.Log("Your new Style: " + newStyle);
